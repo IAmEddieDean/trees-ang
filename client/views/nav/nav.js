@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('poseidon')
+angular.module('trees')
 .controller('NavCtrl', function($rootScope, $scope, $state, $firebaseObject, $http, User){
   function goHome(){
     $state.go('home');
@@ -10,12 +10,8 @@ angular.module('poseidon')
     switch(data.provider){
       case 'password':
         return data.password.email;
-      case 'twitter':
-        return data.twitter.username;
       case 'google':
         return data.google.displayName;
-      case 'facebook':
-        return data.facebook.displayName;
       case 'github':
         return data.github.displayName;
     }
