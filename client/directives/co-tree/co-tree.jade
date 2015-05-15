@@ -1,0 +1,5 @@
+.col-xs-6.col-sm-4.col-md-2.col-lg-1.co-tree
+  p {{state.name | uppercase}}
+  p Health: {{health}} 
+  p Height: {{height}}
+  img.tree(ng-src='{{state.url}}' ng-click='grow()')
