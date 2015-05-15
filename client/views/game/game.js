@@ -8,7 +8,7 @@ angular.module('trees')
     
     Tree.find()
     .then(function(response){
-      $scope.trees = response.data.trees;
+      $rootScope.trees = response.data.trees;
     });
   });
   

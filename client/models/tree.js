@@ -14,5 +14,8 @@ angular.module('trees')
   Tree.grow = function(id){
     return $http.put(nodeUrl + '/trees/' + id + '/grow');
   }
+  Tree.kill = function(id){
+    return $http.delete(nodeUrl + '/trees/' + id + '/kill');
+  }
   return Tree;
 });

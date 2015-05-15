@@ -1,5 +1,8 @@
-.col-xs-6.col-sm-4.col-md-2.col-lg-1.co-tree
+.col-xs-6.col-sm-4.col-md-2.col-lg-1.co-tree(ng-class='{"dead": dead}')
   p {{state.name | uppercase}}
+  div.progress
+    div.progress-bar(ng-class='{"progress-bar-success": health >= 50, "progress-bar-danger": health <= 19}', ng-style='{"width": health + "%"}')
   p Health: {{health}} 
   p Height: {{height}}
   img.tree(ng-src='{{state.url}}' ng-click='grow()')
+//- "progress-bar-warning": health >= 20,
