@@ -16,6 +16,11 @@ angular.module('coTreeModule', [])
     getState();
     $scope.dead = false;
     $scope.grow = function(){
+      if($scope.height === 1000){
+        getState();
+        return;
+      }
+      
       Tree.grow($scope.id)
       .then(function(response){
         getState();
@@ -47,4 +52,4 @@ angular.module('coTreeModule', [])
 });
 
 // ng-class='{"class": {{dead}}}'
-// && response.data.height <= 1000
+//
